@@ -5,7 +5,7 @@ pipeline {
             args '-p 3000:3000' 
         }
     }
-     environment {
+    environment {
         CI = 'true'
     }
     stages {
@@ -14,7 +14,7 @@ pipeline {
                 sh 'npm install' 
             }
         }
-        stage('Test') { 
+        stage('Test1') { 
             steps {
                 sh './jenkins/scripts/test.sh' 
             }
